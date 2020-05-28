@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "超凡签到",
+    "usingComponents": {
+        "i-modal": "../../dist/modal/index",
+        "i-message": "../../dist/message/index",
+        "i-button": "../../dist/button/index"
+    }
+}

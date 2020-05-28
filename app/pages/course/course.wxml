@@ -1,0 +1,87 @@
+<view class="course">
+    <view class="search-type">
+        <picker value="{{typeIndex}}" range="{{typeListArr}}" bindchange="handleSearchTypeChange">
+            <view class="picker">
+            搜索类型:
+             <text class="type-title">{{searchType.title || '课程名字'}}</text>
+            </view>
+        </picker>
+    </view>
+    <view class="header">
+        <input type="text" class="search-box" bindblur="handleGetSearchContent" placeholder="搜索课程" />
+        <button class="add-course" bindtap='handleSearchBtn'>搜索</button>
+        <button class="add-course" bindtap='handleOpenAddCourse'>添加课程</button>
+    </view>
+    <view class="top">
+        <view wx:for="{{['一','二','三','四','五','六','日']}}" wx:key="index" class="top-text">周{{item}}</view>
+    </view>
+    <scroll-view scroll-y="true" class="scroll">
+    <view style="height:1200rpx;width:730rpx;display:flex;">
+        <view style="background-color:#D2E6B3;color:#7cba23;">
+        <view wx:for="{{[1,2,3,4,5,6,7,8,9,10,11,12]}}" wx:key="index" class="left">
+            {{item}}
+        </view>
+        </view>
+        <view wx:for="{{[1,2,3,4,5,6,7,8,9,10,11,12]}}" wx:key="index">
+        <view style="width:750rpx;margin-top:{{(index+1)*100}}rpx;  position: absolute;border-bottom:1rpx solid {{index==3?'red':'lightgray'}};">
+        </view>
+        </view>
+
+        <!--课表-->
+        <view wx:for="{{wlist}}" wx:key="index">
+            <view class="flex-item kcb-item" bindtap="handleCourseClick" data-statu="open" data-index="{{index}}" style="margin-left:{{(item.xqj-1)*100}}rpx;margin-top:{{(item.skjc-1)*100+5}}rpx;height:{{item.skcd*100-5}}rpx;background-color:{{colorArrays[index%9]}}">
+                <view class="smalltext" >{{item.kcmc}}@{{item.courseAddr}}</view>
+            </view>
+        </view>
+    </view>
+    </scroll-view>
+</view>
+
+<i-modal title="课程操作" visible="{{ showAddCourse }}" bind:ok="handleAddCourse" bind:cancel="handleCloseAddCourse">
+    <view class="msg-list">
+        <view class="msg-item">
+            <text class="msg-title">课程名称</text>
+            <input type="text" class="msg-input" bindblur="handleGetCourseName" placeholder="请输入课程名称" value="{{ courseName }}" />
+        </view>
+        <view class="msg-item">
+            <text class="msg-title">课程代码</text>
+            <input type="text" class="msg-input" bindblur="handleGetCourseCode" placeholder="请输入课程代码" value="{{ courseCode }}" />
+        </view>
+        <view class="msg-item">
+            <text class="msg-title">星期几</text>
+            <input type="text" class="msg-input" bindblur="handleGetCourseTime" placeholder="" value="{{ courseTime }}" />
+        </view>
+        <view class="msg-item">
+            <text class="msg-title">上课地点</text>
+            <input type="text" class="msg-input" bindblur="handleGetCoursePlace" placeholder="请输入上课地点" value="{{ coursePlace }}" />
+        </view>
+        <view class="msg-item">
+            <text class="msg-title">周次</text>
+            <input type="text" class="msg-input" bindblur="handleGetCourseWeek" placeholder="" value="{{ courseWeek }}" />
+        </view>
+        <view class="msg-item">
+            <text class="msg-title">节次</text>
+            <input type="text" class="msg-input" bindblur="handleGetCourseStanza" placeholder="" value="{{ courseStanza }}" />
+        </view>
+        <view class="msg-item">
+            <text class="msg-title">年级</text>
+            <input type="text" class="msg-input" bindblur="handleGetGrade" placeholder="" value="{{ stuGrade }}" />
+        </view>
+        <view class="msg-item">
+            <text class="msg-title">专业</text>
+            <input type="text" class="msg-input" bindblur="handleGetMajor" placeholder="" value="{{ stuMajor }}" />
+        </view>
+        <view class="msg-item">
+            <text class="msg-title">班级</text>
+            <input type="text" class="msg-input" bindblur="handleGetClass" placeholder="" value="{{ stuClass }}" />
+        </view>
+        <view class="btn-group" wx:if="{{!isAdd}}">
+            <i-button bindtap="handleDeleteCourseClick" type="error" shape="circle" size="small">删除该课程</i-button>
+            <i-button wx:if="{{type === 'teacher'}}" bindtap="handleToStudentList" shape="circle" size="small">学生名单</i-button>
+        </view>
+    </view>
+</i-modal>
+
+<i-message id="message" />
+
+

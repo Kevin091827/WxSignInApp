@@ -1,0 +1,4 @@
+.divide-line-20 {
+    height: 20rpx;
+    background-color: #FAFAFA;
+}

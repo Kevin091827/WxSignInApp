@@ -1,0 +1,6 @@
+<view class="msg-list">
+  <view class="msg-item" wx:for="{{ msgList }}" wx:key="index">
+    <text class="msg-title">{{ item.title }}</text>
+    <text class="msg-content">{{ item.content }}</text>
+  </view>
+</view>

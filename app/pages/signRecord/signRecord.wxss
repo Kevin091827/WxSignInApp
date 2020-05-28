@@ -1,0 +1,45 @@
+.record-item {
+    padding: 30rpx;
+    margin-bottom: 30rpx;
+    border-bottom: 2rpx solid #e0e0e0;
+}
+
+.course-name {
+    font-size: 18px;
+}
+
+.course-code, .start-time {
+    font-size: 16px;
+}
+
+.operation {
+    display: flex;
+    margin-top: 20rpx;
+    justify-content: flex-end;
+}
+
+.operation > button {
+    height: 60rpx;
+    line-height: 60rpx;
+    font-size: 14px;
+    margin: 0;
+    margin-right: 20rpx;
+}
+
+.delete-btn {
+    color: #fff;
+    background-color: rgb(245, 97, 97);
+}
+
+.export-btn {
+    position: fixed;
+    width: 120rpx;
+    height: 120rpx;
+    bottom: 60rpx;
+    right: 10rpx;
+    border-radius: 50%;
+    background-color: rgb(84, 84, 202);
+    color: #fff;
+    font-size: 16px;
+    line-height: 120rpx;
+}

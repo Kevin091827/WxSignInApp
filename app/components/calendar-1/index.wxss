@@ -1,0 +1,169 @@
+/* pages/dateSelect/dateSelect.wxss */
+.date-day {
+	display: flex;
+	height: 40rpx;
+	padding: 5px;
+	text-align: center;
+	/* justify-content: center; */
+	align-items: center;
+	flex-direction: column;
+}
+
+.date-day.bgitem {
+	color: #2a2a2a;
+}
+
+.date-day.bgitem .item-days-container {
+	background-color: #ded2b9;
+	width: 135%;
+	height: 60rpx;
+	line-height: 60rpx;
+}
+
+.date-day.active {
+	/* background: #099FDE; */
+	color: #000;
+}
+
+.date-day.unavailable {
+	color: #d0d0d0;
+}
+
+.date-week {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	margin: 5px;
+}
+
+.week {
+	color: #099fde;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+}
+
+.row-header {
+	display: flex;
+	align-items: center;
+	height: 80rpx;
+}
+
+.row-header .date-week {
+	color: #2a2a2a;
+	font-size: 18px;
+}
+
+.item-days {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 35rpx;
+}
+
+.bgwhite {
+	background-color: #fff;
+}
+
+.all-days {
+	font-size: 18px;
+	text-align: center;
+}
+
+.all-days > text {
+	display: inline-block;
+	padding: 0 40rpx;
+	background-color: #888;
+	color: #fff;
+}
+
+.header {
+	position: relative;
+	height: 108rpx;
+	width: 100%;
+	color: #2a2a2a;
+	font-size: 18px;
+	font-weight: 500;
+	text-align: center;
+	line-height: 100rpx;
+	background-color: #fff;
+	border-bottom: 2rpx solid #e0e0e0;
+}
+
+.header .close-btn {
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 108rpx;
+	line-height: 108rpx;
+	padding-right: 45rpx;
+	text-align: center;
+}
+
+.header .close-btn-img {
+	width: 40rpx;
+	height: 40rpx;
+	color: #b5b5b5;
+}
+
+.date-day.active text.active {
+	float: left;
+	z-index: 1;
+	width: 60rpx;
+	height: 60rpx;
+	line-height: 60rpx;
+	text-align: center;
+	border-radius: 50%;
+	background-color: #FFA41F;
+	color: #2a2a2a;
+}
+
+.dayin-bgitem .item-days-container,
+.dayout-bgitem .item-days-container {
+	position: relative;
+	width: 123%;
+}
+
+.dayin-bgitem .item-days-container::after,
+.dayout-bgitem .item-days-container::after {
+	content: '';
+	position: absolute;
+	z-index: 0;
+	width: 50%;
+	height: 60rpx;
+	top: 0;
+	right: 0;
+	background-color: rgb(253, 196, 111);
+	line-height: 60rpx;
+}
+
+.dayout-bgitem .item-days-container::after {
+	left: -2px;
+}
+
+.price {
+	color: #d3737a;
+	font-size: 12px;
+}
+
+.top {
+	z-index: 99;
+}
+
+.date-year-month {
+	height: 110rpx;
+	font-size: 18px;
+	line-height: 110rpx;
+	color: #2a2a2a;
+}
+
+text.active {
+	width: 60rpx;
+	height: 60rpx;
+	text-align: center;
+	line-height: 60rpx;
+}

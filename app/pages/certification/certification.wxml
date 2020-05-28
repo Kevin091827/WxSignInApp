@@ -1,0 +1,27 @@
+<!-- pages/certification/certification.wxml -->
+<view class='container' wx:if="{{isFinishLoading || true}}">
+    <view class='text'>身份</view>
+    <radio-group bindchange="selectPos" class='select-pos'>
+        <label class="radio">
+            <radio value="student" checked="true"/>学生
+        </label>
+        <label class="radio">
+            <radio value="teacher" />老师
+        </label>
+    </radio-group>
+
+    <view class='text'>学校</view>
+    <input wx:if="{{ isCheck !== 'YES' }}" class="box " type='text' placeholder='请输入学校' maxlength='20' placeholder-class="input-placeholder" disabled="{{isCheck == 'YES'}}" value="{{schoolName}}" bindblur='getSchoolName' bindinput='getSchoolName'></input>
+    
+    <view class='text'>{{ isStudent ? '学号' : '工号' }}</view>
+    <input wx:if="{{isCheck !== 'YES'}}" class="box " type='idcard' maxlength='18' placeholder='请填写账号' placeholder-class="input-placeholder" disabled="{{isCheck == 'YES'}}" value='{{cerid}}' bindblur='getCerid' bindinput='getCerid'></input>
+
+    <view class='text'>密码</view>   
+    <view class='phone_ctn'>
+        <input type='text' maxlength='15' placeholder='请填写密码' placeholder-class="input-placeholder" value='{{password}}' bindblur='getPassword' bindinput='getPassword'></input>
+    </view>
+    
+    <form bindsubmit="delay" report-submit='true'>
+        <button class="btn" form-type='submit'>开始认证</button>
+    </form>
+</view>

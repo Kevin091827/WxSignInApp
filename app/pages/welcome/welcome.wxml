@@ -1,0 +1,13 @@
+<!--pages/welconme/welcome.wxml-->
+<view class='container'>
+  <image class='img' src="/static/images/logo1.png"></image>
+  <view class="title">超凡签到</view>
+  <view class="msg">
+    <view class="msg-title">该程序将获取以下权限：</view>
+    <view class="msg-content">获取您的公开信息（昵称、头像等）</view>
+  </view>
+  <view class="btn-group">
+    <button class="btn calcel-btn" bindtap="handleCancelBtnClick">拒绝</button>
+    <button class='btn confirm-btn' open-type="getUserInfo" bindgetuserinfo="getUserInfo" >允许</button>
+  </view>
+</view>

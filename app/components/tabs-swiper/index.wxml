@@ -1,0 +1,50 @@
+<view class="container">
+  <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}" scroll-with-animation='{{true}}'>
+  	<block wx:for="{{roomList}}" wx:key="{{index}}">
+    	<view class="tab-item {{currentTab==index?'active':''}}" data-room="{{item.Rows[0]}}" data-current="{{index}}" bindtap="swichNav">{{item.Rows[0].OrderItemCName}}</view>
+  	</block>
+  </scroll-view>
+  <swiper class="tab-content" current="{{currentTab}}" duration="300"  bindchange="switchTab">
+    <block wx:for="{{roomList}}" wx:key="{{index}}">
+      <swiper-item  data-room="{{item.Rows[0]}}" bindtap="handleSelectRoom" data-code="{{item.Rows[0].OrderItemCode}}">
+        <view class="item-ans">
+          <view class="room-full" wx:if="{{item.CanBooking === '0'}}">
+            房间已满 
+          </view>
+          <view class="img" data-room="{{item.Rows[0]}}">
+            <image mode='aspectFit' src='{{item.HotelImageLoadUrl}}'></image>
+          </view>
+          <view class="right">
+            <view class="room-name">
+              {{item.Rows[0].OrderItemCName}}
+            </view>
+            <!-- <view class="score">
+              <text>送312积分</text>
+            </view> -->
+            <view class="badge-detail">
+              <view class="badge-list">
+                <view class="badge" wx:if="{{item.Rows[0].Area}}">{{item.Rows[0].Area}}</view>
+                <!-- <view class="badge" wx:if="{{item.Rows[0].WifiDis}}">{{item.Rows[0].WifiDis}}</view> -->
+                <view class="badge" wx:if="{{item.Rows[0].BbfDis}}">{{item.Rows[0].BbfDis}}</view>
+              </view> 
+              <!-- <view class="to-detail" data-room="{{item.Rows[0]}}" bindtap='handleToDetail'>
+                查看详情
+              </view> -->
+            </view>
+            <view class="current-price">
+              <text class="money-icon">￥</text>{{item.Rows[0].Aveprice}}
+            </view>
+            <view class="bottom-remain">
+                <view class="origin-price">
+                  <text class="money-icon">￥</text>{{item.Rows[0].Aveprice}}
+                </view>
+                <view class="remain-count">
+                    
+                </view>
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>

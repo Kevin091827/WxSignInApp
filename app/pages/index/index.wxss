@@ -1,0 +1,83 @@
+/**index.wxss**/
+/* #FFA41F */
+
+.container{
+  display:flex;
+  flex-direction: column;
+  align-items: center
+}
+
+.title {
+  height: 300rpx;
+  padding: 0 30rpx;
+  line-height: 300rpx;
+}
+
+.num {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100rpx;
+}
+
+.num-input {
+  width: 400rpx;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  border: 1px solid #e0e0e0;
+}
+
+
+.sign-btn {
+  width: 80%;
+  margin-left: 10%;
+  margin-left: 10%;
+  margin-top: 10%;
+  border-radius: 8rpx;
+  font-size: 32rpx;
+  font-weight: 300;
+  color: rgba(42, 42, 42, 1);
+  background-color: #FFA41F
+}
+
+.show-list {
+  width: 80%;
+  padding: 0 30rpx 20rpx 0;
+  margin-bottom: 30rpx;
+  border-bottom: 2rpx solid #e0e0e0;
+}
+
+.list-title {
+  font-size: 18px;
+  margin-bottom: 20rpx;
+}
+
+.name-list {
+  font-size: 16px;
+}
+
+.name-item {
+  margin: 10rpx 0;
+  padding: 10rpx;
+}
+
+.name-item:nth-child(odd) {
+  background-color: #f0f0f0;
+}
+
+.msg-item {
+  display: flex;
+  height: 60rpx;
+  justify-content: space-around;
+  margin-bottom: 30rpx;
+}
+
+.msg-item .msg-title {
+  height: 100%;
+  line-height: 60rpx;
+}
+
+.msg-item .msg-input {
+  width: 165px;
+  border: 1px solid #e0e0e0;
+}

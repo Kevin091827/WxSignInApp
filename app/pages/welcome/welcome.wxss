@@ -1,0 +1,63 @@
+/* pages/welconme/welcome.wxss */
+.container{
+  height: 50%;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.img {
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.title {
+  margin-top: 24rpx;
+  font-size: 18px;
+  color: #2A2A2A;
+}
+
+.msg {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 38rpx;
+  margin-top: 184rpx;
+  font-size: 14px;
+  color: #2A2A2A;
+}
+
+.msg .msg-content {
+  margin-top: 28rpx;
+  font-size: 12px;
+  color: #898989;
+}
+
+.btn-group {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 32rpx;
+  margin-top: 80rpx;
+  justify-content: space-between;
+}
+
+.btn {
+  width: 330rpx;
+  height: 70rpx;
+  font-size: 16px;
+  line-height: 70rpx;
+  text-align: center;
+  border-radius: 10rpx;
+}
+
+.cancel-btn {
+  background-color: #f4f4f4;
+  color: #898989;
+}
+
+.confirm-btn {
+  background-color: #1BAC1B;
+  color: #fff;
+}

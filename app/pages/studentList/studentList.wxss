@@ -1,0 +1,15 @@
+/* pages/studentList/studentList.wxss */
+.student-list {
+
+}
+
+.student-item {
+    display: flex;
+    padding: 20rpx;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+.student-item:nth-child(odd) {
+    background-color: #f0f0f0;
+}

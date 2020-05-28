@@ -1,0 +1,53 @@
+<!-- pages/certification/certification.wxml -->
+<view class='container'>
+    <view class='text'>身份</view>
+    <radio-group bindchange="selectPos" class='select-pos'>
+        <label class="radio">
+            <radio value="student" checked="{{isStudent}}"/>学生
+        </label>
+        <label class="radio">
+            <radio value="teacher" checked="{{!isStudent}}" />老师
+        </label>
+    </radio-group>
+
+    <view class='text'>学校</view>
+    <input class="box " type='text' placeholder='请输入学校' maxlength='20' placeholder-class="input-placeholder" disabled="{{isCheck == 'YES'}}" value="{{schoolName}}" bindblur='getSchoolName' bindinput='getSchoolName'></input>
+    
+    <view class='text'>{{ isStudent ? '学号' : '工号' }}</view>
+    <input class="box " type='idcard' maxlength='18' placeholder='请填写账号' placeholder-class="input-placeholder" disabled="{{isCheck == 'YES'}}" value='{{cerid}}' bindblur='getCerid' bindinput='getCerid'></input>
+
+    <view class='text'>名字</view>
+    <input class="box " type='text' placeholder='请输入名字' maxlength='20' placeholder-class="input-placeholder" disabled="{{isCheck == 'YES'}}" value="{{name}}" bindblur='getName' bindinput='getName'></input>
+
+    <view class='text'>学院</view>
+    <input class="box " type='text' placeholder='请输入学院' maxlength='30' placeholder-class="input-placeholder" disabled="{{isCheck == 'YES'}}" value="{{collage}}" bindblur='getCollage' bindinput='getCollage'></input>
+
+    <block wx:if="{{isStudent}}">
+        <view class='text'>专业</view>
+        <input class="box " type='text' placeholder='请输入专业' maxlength='30' placeholder-class="input-placeholder" disabled="{{isCheck == 'YES'}}" value="{{major}}" bindblur='getMajor' bindinput='getMajor'></input>
+    </block>
+
+    <block wx:if="{{isStudent}}">
+        <view class='text'>年级</view>
+        <input class="box " type='text' placeholder='请输入年级' maxlength='10' placeholder-class="input-placeholder" disabled="{{isCheck == 'YES'}}" value="{{grade}}" bindblur='getGrade' bindinput='getGrade'></input>
+    </block>
+
+    <block wx:if="{{isStudent}}">
+        <view class='text'>班级</view>
+        <input class="box " type='number' placeholder='请输入班级' maxlength='2' placeholder-class="input-placeholder" disabled="{{isCheck == 'YES'}}" value="{{stuClass}}" bindblur='getClass' bindinput='getClass'></input>
+    </block>
+
+    <view class='text'>电话</view>   
+    <view class='phone_ctn'>
+        <input type='number' maxlength='15' placeholder='请填写电话' placeholder-class="input-placeholder" value='{{phone}}' bindblur='getPhone' bindinput='getPhone'></input>
+    </view>
+
+    <view class='text'>邮箱</view>   
+    <view class='phone_ctn'>
+        <input type='mail' maxlength='20' placeholder='请填写邮箱' placeholder-class="input-placeholder" value='{{email}}' bindblur='getMail' bindinput='getMail'></input>
+    </view>
+    
+    <form bindsubmit="delay" report-submit='true'>
+        <button class="btn" form-type='submit'>提交信息</button>
+    </form>
+</view>

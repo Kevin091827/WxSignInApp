@@ -1,0 +1,12 @@
+<view class="record-list">
+    <view class="record-item" wx:for="{{list}}" wx:key="index">
+        <view class="course-name">{{item.courseName}}</view>
+        <view class="course-code">课程代码: {{ item.courseId }}</view>
+        <view class="start-time">发起时间：{{ item.gmtCreate }}</view>
+        <view class="start-time">签到口令：{{ item.signNum }}</view>
+        <view class="operation">
+            <button class="delete-btn" wx:if="{{!isStudent}}" data-id="{{item.id}}" bindtap="handleDeleteBtnClick">删除</button>
+            <!-- <button class="stulist-btn" wx:if="{{!isStudent}}">学生名单</button> -->
+        </view>
+    </view>
+</view>

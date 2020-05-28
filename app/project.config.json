@@ -1,0 +1,302 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.6.1",
+	"appid": "wx461cd161bd35aaf7",
+	"projectname": "sign_app",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "订单确认",
+					"pathName": "pages/orderConfirm/orderConfirm",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "偏好设置",
+					"pathName": "pages/personalPrefer/personalPrefer",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "酒店政策",
+					"pathName": "pages/policy/policy",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "住房",
+					"pathName": "pages/housing/housing",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "退房",
+					"pathName": "pages/checkout/checkout",
+					"query": "auto=true&invokeUrl=http%3A%2F%2Fpms.gshis.com%2FResManage%2FRes%2FEInvoice%3Fid%3D298b70bf-d1c7-4e7f-a9ed-a225642e76b3-005251-a2ddde188e655407a5fdb8bbfc9ae06d",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的订单",
+					"pathName": "pages/myOrder/myOrder",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 6,
+					"name": "订单详情",
+					"pathName": "pages/orderDetail/orderDetail",
+					"query": "OrderNo=000381201904260044",
+					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "index",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "入住人管理",
+					"pathName": "pages/guestAdd/guestAdd",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 9,
+					"name": "发票抬头",
+					"pathName": "pages/checkoutInvoiceTitle/checkoutInvoiceTitle",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "订单信息",
+					"pathName": "pages/orderMsg/orderMsg",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "订单添加入住人",
+					"pathName": "pages/guestAdd/guestAdd",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "编辑入住人",
+					"pathName": "pages/editGuest/editGuest",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "入住人管理[个人中心]",
+					"pathName": "pages/guestManager/guestManager",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "实名认证[个人中心]",
+					"pathName": "pages/certification/certification",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "关于我们",
+					"pathName": "pages/join/join",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "反馈",
+					"pathName": "pages/feedBack/feedBack",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "会员权益",
+					"pathName": "pages/_userDetail/_userDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "扫码绑定商旅会员",
+					"pathName": "pages/boundVip/boundVip",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 19,
+					"name": "绑定商旅会员",
+					"pathName": "pages/vipBound/vipBound",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "绑定结果",
+					"pathName": "pages/boundVip-suc/boundVip-suc",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 21,
+					"name": "酒店政策",
+					"pathName": "pages/policy/policy",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "酒店政策",
+					"pathName": "pages/boundVip/boundVip",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "续房",
+					"pathName": "pages/continueHousing/continueHousing",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "审核",
+					"pathName": "pages/vipReview/vipReview",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/checkToCheckout/checkToCheckout",
+					"pathName": "pages/checkToCheckout/checkToCheckout",
+					"query": "roomNo=1198",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/boundVip-suc/boundVip-suc",
+					"pathName": "pages/boundVip-suc/boundVip-suc",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "个人信息",
+					"pathName": "pages/mine/mine",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "welcome",
+					"pathName": "pages/welcome/welcome",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/course/course",
+					"pathName": "pages/course/course",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "mine",
+					"pathName": "pages/mine/mine",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/moreMsg/moreMsg",
+					"pathName": "pages/moreMsg/moreMsg",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/completeMsg/completeMsg",
+					"pathName": "pages/completeMsg/completeMsg",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/courseDetail/courseDetail",
+					"pathName": "pages/courseDetail/courseDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/studentList/studentList",
+					"pathName": "pages/studentList/studentList",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/signRecord/signRecord",
+					"pathName": "pages/signRecord/signRecord",
+					"scene": null
+				}
+			]
+		}
+	}
+}

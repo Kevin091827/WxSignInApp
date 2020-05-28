@@ -1,0 +1,16 @@
+.msg-list {
+    margin: 20rpx 0;
+    background-color: #fff;
+    font-size: 14px;
+    color: #000;
+  }
+  
+  .msg-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 20rpx 30rpx;
+  }
+  
+  .msg-item .msg-content {
+    color: rgba(86, 86, 86, 1);
+  }

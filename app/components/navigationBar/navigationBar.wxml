@@ -1,0 +1,14 @@
+<!--components/navigationBar.wxml-->
+<view class="navbar" style="{{'height: ' + navigationBarHeight}}">
+ <view style="{{'height: ' + statusBarHeight}}"></view>
+ <view class='title-container'>
+  <view class='capsule' >
+   
+   <view bindtap='backHome' >
+    <image src='/static/images/home.png'></image>
+   </view>
+  </view>
+  <view class='title'>{{text}}</view>
+ </view>
+</view>
+<view style="{{'height: ' + navigationBarHeight}};background: white;"></view>

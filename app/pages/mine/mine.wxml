@@ -1,0 +1,105 @@
+<!-- pages/mine/mine.wxml -->
+
+<view class="_userinfo" wx:if="{{hasUserInfo}}" bindtap='goCertification'>
+  <view class="user-l">
+    <image class="_userinfo-avatar" wx:if="{{userInfo.avatarUrl}}" src="{{userInfo.avatarUrl}}" ></image>
+  </view>
+  <view class="user-row">
+    <view class="_userinfo-name">{{ name }}</view>
+  </view>
+</view>
+
+<view class='header _userinfo' wx:else>
+  <view class="user-l">
+    <image class="_userinfo-avatar" wx:if="{{userInfo.avatarUrl}}" src="{{userInfo.avatarUrl}}" ></image>
+  </view>
+  <view class="user-row">
+    <view class="row1">
+      <text class="_userinfo-name"  wx:if="{{userInfo.nickName != 'undefined'}}">{{userInfo.nickName}}</text>
+    </view>
+  </view>
+  <view class='header-info'>
+    <button class='info-login font-large' open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+      登录
+    </button>
+  </view>
+</view>
+
+<view class="tips" hidden="{{isCertify}}">
+  <view class="tip">您还没身份认证，快去~</view>
+  <view class="certify" bindtap="goCertification">身份认证</view>
+</view>
+
+<view class="msg-list">
+  <view class="msg-item" wx:for="{{ msgList }}" wx:key="index">
+    <text class="msg-title">{{ item.title }}</text>
+    <text class="msg-content">{{ item.content }}</text>
+  </view>
+</view>
+
+<view class="menus">
+  <view class="menus-top">
+    <!-- <navigator>
+      <view class="menus-item" catchtap="checkIsLogin" data-link="../certification/certification">
+        <image src="/static/mine/4.png" class="item-icon" />
+        <text class="item-title">绑定</text>
+        <image src="/static/mine/arrow.png" class="arrow" />
+      </view>
+    </navigator> -->
+    <navigator>
+      <view class="menus-item" catchtap="checkIsLogin" data-link="../completeMsg/completeMsg">
+        <image src="/static/mine/6.png" class="item-icon" />
+        <text class="item-title">完善信息</text>
+        <image src="/static/mine/arrow.png" class="arrow" />
+      </view>
+    </navigator>
+    <navigator>
+      <view class="menus-item" catchtap="checkIsLogin" data-link="../moreMsg/moreMsg">
+        <image src="/static/mine/3.png" class="item-icon" />
+        <text class="item-title">更多信息</text>
+        <image src="/static/mine/arrow.png" class="arrow" />
+      </view>
+    </navigator>
+    
+    <navigator>
+      <view class="menus-item" catchtap="checkIsLogin" data-link="../signRecord/signRecord">
+        <image src="/static/mine/1.png" style="width:40rpx;height:36rpx;" class="item-icon" />
+        <text class="item-title">签到记录</text>
+        <image src="/static/mine/arrow.png" class="arrow" />
+      </view>
+    </navigator>
+  </view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

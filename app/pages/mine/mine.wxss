@@ -1,0 +1,378 @@
+/* pages/mine/mine.wxss */
+page {
+  background-color: #F8F8F8;
+  
+}
+/* page::-webkit-scrollbar {
+  display: none;
+} */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.userinfo {
+  height: 226rpx;
+  background: linear-gradient(45deg, rgba(237, 214, 168, 1) 0%, rgba(231, 205, 152, 1) 100%);
+  /* padding: 10rpx 38rpx; */
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.userinfo-avatar {
+  display: inline-block;
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+
+.userinfo-name {
+  position: absolute;
+  top: -60rpx;
+  left: 100rpx;
+}
+
+.yes {
+  position: relative;
+}
+
+.yes::after {
+  content: '已验证';
+  position: absolute;
+  left: 80rpx;
+  top: 40rpx;
+  width: 100rpx;
+  height: 50rpx;
+  border-radius: 20rpx;
+  border: 1px solid #cc0001;
+  font-size: 14px;
+  text-align: center;
+  line-height: 50rpx;
+}
+
+.no {
+  position: relative;
+}
+
+.no::after {
+  content: '未验证';
+  position: absolute;
+  left: 80rpx;
+  top: 40rpx;
+  width: 100rpx;
+  height: 50rpx;
+  border-radius: 20rpx;
+  border: 1px solid #cc0001;
+  font-size: 14px;
+  text-align: center;
+  line-height: 50rpx;
+}
+
+.vip {
+  position: absolute;
+  top: 130rpx;
+  left: 250rpx;
+}
+
+.score {
+  position: absolute;
+  top: 130rpx;
+  left: 350rpx;
+}
+
+.tag {
+  /* padding: 5rpx 10rpx; */
+  border-radius: 10%;
+  border: 1px solid #FFA41F;
+  height: 33rpx;
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(246, 229, 193, 1);
+  line-height: 33rpx;
+  background-color: #FFA41F;
+}
+
+
+
+
+.m-item {
+  background: #fff;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 42rpx;
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  line-height: 34rpx;
+  color: rgba(86, 86, 86, 1);
+  opacity: 1;
+  /* padding: 4%; */
+  border-bottom: 1px solid #eee;
+  display: flex;
+
+}
+
+.icon {
+  width: 5%;
+  height: 40rpx;
+  vertical-align: middle;
+
+}
+
+.main {
+  width: 80%;
+  /* padding-left: 2%; */
+}
+
+
+
+
+
+
+
+
+
+
+/* 登陆 */
+.header {
+  display: flex;
+
+  padding: 30rpx 50rpx 30rpx 40rpx;
+  background: #fff;
+}
+
+.header-tx {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 30rpx;
+  border: 1px solid #cc0001;
+}
+
+.unLogin-tx {
+  background: #fff;
+  width: 120rpx;
+  height: 120rpx;
+  text-align: center;
+  line-height: 120rpx
+}
+
+.userNickName {
+  font-size: 43rpx;
+  color: #fff;
+}
+
+.header-right {
+  width: 60%;
+  color: #fff;
+}
+
+.login-name {
+  height: 60rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.login-setPhone {
+  color: #fff;
+  font-size: 26rpx;
+  background: rgba(0, 0, 0, 0.253);
+  border-radius: 30rpx;
+  /* padding: 10rpx 20rpx; */
+  margin-top: 5rpx;
+}
+
+i-icon {
+  font-size: 50rpx;
+  color: rgb(256, 138, 56);
+}
+
+.info-login {
+  width: 192rpx;
+  height: 62rpx;
+  margin-left: 30rpx;
+  color: #fff;
+  background-color: #FFA41F;
+  font-size: 16px;
+  line-height: 62rpx;
+  border: none;
+  border-radius: 50rpx;
+}
+
+/* 头部用户信息 */
+._userinfo {
+  
+  height: 210rpx;
+  background: rgba(255, 255, 255, 1);
+  padding-left: 40rpx;
+  /* padding-top: 32rpx;
+  padding-bottom: 32rpx; */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+._userinfo-avatar {
+
+  width: 124rpx;
+  height: 124rpx;
+  background: rgba(129, 129, 129, 1);
+  border-radius: 50%;
+}
+
+
+.user-row{
+  margin-left:16rpx; 
+  display:flex;
+  flex-direction: column;
+  
+}
+.row1{
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+align-items: center;
+}
+._userinfo-name {
+  max-width:300rpx;
+  height: 56rpx;
+  font-size: 40rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  line-height: 56rpx;
+  color: rgba(38, 30, 30, 1);
+text-align: center;
+
+overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+}
+.vip-icon{
+  width: 38rpx;
+  height: 38rpx;
+  display: inline-block;
+  margin-left: 14rpx;
+}
+.row2{
+  width:232rpx;
+height:44rpx;
+background:#FFA41F;
+
+border-radius:60rpx;
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+font-size:24rpx;
+font-family:PingFang SC;
+font-weight:300;
+line-height:44rpx;
+color:rgba(255,255,255,1);
+}
+/* 实名认证提示 */
+.tips{
+  background: rgba(255, 255, 255, 1);
+  padding: 0 40rpx;
+  height:98rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center
+}
+.tip{
+  font-size:28rpx;
+font-family:PingFang SC;
+font-weight:500;
+line-height:40rpx;
+color:rgba(7,6,3,1);
+}
+.certify{
+  width:192rpx;
+  height:62rpx;
+  background:rgba(241,86,86,1);
+  box-shadow:0rpx 6rpx 8rpx rgba(241,86,86,0.31);
+  border-radius:50rpx;
+  font-size:28rpx;
+  font-family:PingFang SC;
+  font-weight:500;
+  text-align: center;
+  line-height:62rpx;
+  color:rgba(255,255,255,1);
+}
+
+/* 个人信息展示 */
+.msg-list {
+  margin: 20rpx 0;
+  background-color: #fff;
+  font-size: 14px;
+  color: #000;
+}
+
+.msg-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 30rpx;
+}
+
+.msg-item .msg-content {
+  color: rgba(86, 86, 86, 1);
+}
+
+/* 个人中心菜单 */
+.menus {
+  line-height: 100rpx;
+display: flex;
+flex-direction: column;
+}
+
+.menus-item {
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 30rpx;
+  margin: 20rpx 0;
+  background: rgba(255, 255, 255, 1);
+}
+
+.menus-top {
+  margin-bottom: 20rpx;
+
+}
+
+.menus-middle {
+  margin-bottom: 20rpx;
+
+}
+
+.item-icon {
+  width: 40rpx;
+  height: 40rpx;
+  /* line-height:34rpx; */
+  vertical-align: middle;
+}
+
+.item-title {
+  margin-left: 24rpx;
+  flex-grow: 1;
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+
+  color: rgba(86, 86, 86, 1);
+}
+
+.arrow {
+  width: 13rpx;
+  height: 24rpx;
+  /* vertical-align: middle;
+  float: right; */
+
+}

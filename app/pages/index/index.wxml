@@ -1,0 +1,52 @@
+<!-- index.wxml -->
+<view class="container">
+  <view class="title">{{courseName || ''}} {{(isStudent && signSucc) ? '签到成功' : ''}}</view>
+  <block wx:if="{{ !isSignining }}">
+    <view class='num'>
+      <input class='num-input' type="number" maxlength="6" placeholder="请输入6位数口令" bindblur="getSignCode" />
+    </view>
+    <button class="sign-btn" bindtap='signIn'>{{ isStudent ? '点击签到' : '发起签到' }}</button>
+  </block>
+  <block wx:else>
+    <view class="show-list">
+      <view class="list-title">待签到</view>
+      <view class="name-list">
+        <view class="name-item" wx:for="{{noSignIn}}" wx:key="{{index}}">
+          {{item.grade + item.collage + item.stuClass + ' ' + item.name}}
+        </view>
+      </view>
+    </view>
+    <view class="show-list">
+      <view class="list-title">已签到</view>
+      <view class="name-list">
+        <view class="name-item" wx:for="{{hadSignIn}}" wx:key="{{index}}">
+          {{item.grade + item.collage + item.stuClass + ' ' + item.name}}
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
+
+<i-modal title="课程信息" visible="{{ showMsgModel }}" bind:ok="handleConfirmBtn" bind:cancel="handleCloseMsgModel">
+    <view class="msg-list">
+        <view class="msg-item">
+            <text class="msg-title">课程名称</text>
+            <input type="text" class="msg-input" bindblur="handleGetCourseName" placeholder="请输入课程名称" value="{{ courseName }}" />
+        </view>
+        <view class="msg-item">
+            <text class="msg-title">星期几</text>
+            <input type="text" class="msg-input" bindblur="handleGetCourseTime" placeholder="请输入上课时间" value="{{ courseTime }}" />
+        </view>
+        <view class="msg-item">
+            <text class="msg-title">上课地点</text>
+            <input type="text" class="msg-input" bindblur="handleGetCoursePlace" placeholder="请输入上课地点" value="{{ coursePlace }}" />
+        </view>
+        <view class="msg-item">
+            <text class="msg-title">节次</text>
+            <input type="text" class="msg-input" bindblur="handleGetCourseStanza" placeholder="" value="{{ courseStanza }}" />
+        </view>
+    </view>
+</i-modal>
+
+<i-message id="message" />
+

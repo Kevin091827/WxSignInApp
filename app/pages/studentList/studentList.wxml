@@ -1,0 +1,12 @@
+<view class="student-list">
+    <view class="student-item">
+        <view>姓名</view>
+        <view>班级</view>
+        <view>学号</view>
+    </view>
+    <view class="student-item" wx:for="{{stuList}}" wx:key="{{index}}">
+        <view>{{item.name}}</view>
+        <view>{{item.class}}</view>
+        <view>{{item.accountId}}</view>
+    </view>
+</view>
