@@ -37,4 +37,8 @@ public interface CourseMapper {
     @ResultMap("courseResultMap")
     @Select("select * from tb_course where tea_id = #{accountId}")
     List<Course> selectCourseByAccId(String accountId);
+
+    @ResultMap("courseResultMap")
+    @Select("select * from tb_course")
+    List<Course> selectAllCourse();
 }
