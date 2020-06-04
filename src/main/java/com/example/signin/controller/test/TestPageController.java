@@ -1,4 +1,4 @@
-package com.example.signin.controller;
+package com.example.signin.controller.test;
 
 import com.example.signin.service.TestPageService;
 import com.example.signin.util.AjaxResult;

@@ -1,5 +1,7 @@
 package com.example.signin.util;
 
+import com.example.signin.exception.ErrorCode;
+
 import java.io.Serializable;
 import java.util.List;
 
@@ -28,6 +30,10 @@ public class AjaxResult implements Serializable {
         this.oData = oData;
     }
 
+    public AjaxResult(ErrorCode errorCode,String errorMsg){
+        this.sData = errorMsg;
+        this.status = errorCode.getCode();
+    }
 
     /**
      * @param
